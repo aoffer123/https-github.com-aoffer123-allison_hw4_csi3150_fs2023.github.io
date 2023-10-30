@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="title-container">
+      <h1><span>Used Car Inventory</span></h1>
+    </div>
+
+    <div class="wrapper">
+      <div class="filter-container">
+        <label for="filter-year">Year:</label>
+        <!--Year Filter-->
+        <div class="filter-year">
+          <!--Min Year-->
+          <label for="minYear">Min Year:</label>
+          <input type="number" id="minYear" />
+
+          <!--Max Year-->
+          <label for="maxYear">Max Year:</label>
+          <input type="number" id="maxYear" />
+        </div>
+
+        <!--Make Filter-->
+        <div class="make-filter">
+          <label for="makeSelect">Make:</label>
+          <select id="makeSelect">
+            <option value="reselect" disabled hidden>Reselect</option>
+            <option value="AllMakes">All Makes</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Ford">Ford</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Kia">Kia</option>
+            <option value="Mazda">Mazda</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Cadillac">Cadillac</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Subaru">Subaru</option>
+            <option value="Tesla">Tesla</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Lexus">Lexus</option>
+            <option value="BMW">BMW</option>
+          </select>
+        </div>
+
+        <!--Mileage Filter-->
+        <div class="filter-mileage">
+          <label for="mileageSelect">Mileage:</label>
+          <select id="mileageSelect">
+            <option value="reselect" disabled hidden>Reselect</option>
+            <option value="AllMileage">All Mileage</option>
+            <option value="18000">18000</option>
+            <option value="22000">22000</option>
+            <option value="26000">26000</option>
+            <option value="28000">28000</option>
+            <option value="29000">29000</option>
+            <option value="30000">30000</option>
+            <option value="32000">32000</option>
+            <option value="35000">35000</option>
+            <option value="40000">40000</option>
+            <option value="45000">45000</option>
+            <option value="50000">50000</option>
+            <option value="60000">60000</option>
+          </select>
+        </div>
+
+        <!--Price Filter-->
+        <div class="filter-price">
+          <label for="maxPriceSelect">Price:</label>
+          <select id="maxPriceSelect">
+            <option value="reselect" disabled hidden>Reselect</option>
+            <option value="AllPrices">All Prices</option>
+            <option value="12000">12000</option>
+            <option value="20000">20000</option>
+            <option value="30000">30000</option>
+            <option value="40000">40000</option>
+            <option value="50000">50000</option>
+            <option value="60000">60000</option>
+            <option value="70000">70000</option>
+          </select>
+        </div>
+
+        <!--Color Filter-->
+        <div class="color-filter">
+          <label for="colorSelect">Color:</label>
+          <select id="colorSelect">
+            <option value="reselect" disabled hidden>Reselect</option>
+            <option value="AllColors">All Colors</option>
+            <option value="Silver">Silver</option>
+            <option value="White">White</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Red">Red</option>
+            <option value="Gray">Gray</option>
+            <option value="Green">Green</option>
+          </select>
+        </div>
+        <button type="button" onClick="handleFilters()" id="filterButton">
+          Filter
+        </button>
+      </div>
+
+      <!--Car cards to show up in center of page-->
+      <main>
+        <div class="car-info">
+          <div id="carContainer" class="car-container"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/usedCars.js"></script>
+  </body>
+</html>
